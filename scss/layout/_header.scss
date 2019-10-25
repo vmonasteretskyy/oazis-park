@@ -1,0 +1,114 @@
+/*
+================================================================================
+|                                     HEADER                                   |
+================================================================================
+*/
+.header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	background-color: $base-bg;
+	z-index: 100;
+	&::after {
+		content: "";
+		position: absolute;
+		bottom: 66px;
+		left: 0;
+		right: 0;
+		border-top: 1px solid rgba($color: $black, $alpha: 0.09);
+	}
+}
+
+.logo {
+	color: #444e54;
+	font-size: 35px;
+	font-weight: 300;
+	&__img {
+		width: 124px;
+		height: 116px;
+		background-color: #0ec357;
+		@extend %center-center;
+		> img {
+			width: 76px;
+		}
+	}
+	p {
+		margin-left: 30px;
+		> small {
+			display: block;
+			font-size: 18px;
+			line-height: normal;
+			color: $text-color;
+			opacity: 0.47;
+			font-family: $second-font-family;
+		}
+	}
+}
+
+.menu {
+	height: 66px;
+	a {
+		&:hover {
+			color: $text-green;
+		}
+	}
+}
+
+@media only screen and (max-width: 1199.8px) {
+	.header {
+		&::after {
+			bottom: 55px;
+		}
+	}
+
+	.logo {
+		font-size: 20px;
+		&__img {
+			width: 69px;
+			height: 69px;
+			> img {
+				width: 44px;
+			}
+		}
+		p {
+			margin-left: 18px;
+			> small {
+				font-size: 10px;
+			}
+		}
+	}
+
+	.menu {
+		height: 56px;
+		font-size: 12px;
+	}
+}
+
+@media only screen and (max-width: 767.8px) {
+	.header {
+		&::after {
+			display: none;
+		}
+		.container {
+			padding: 0;
+		}
+	}
+
+	.logo {
+		font-size: 16px;
+		&__img {
+			width: 70px;
+			height: 68px;
+			> img {
+				width: 32px;
+			}
+		}
+		p {
+			margin-left: 8px;
+			> small {
+				font-size: 8px;
+			}
+		}
+	}
+}
