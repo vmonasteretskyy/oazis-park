@@ -141,7 +141,7 @@
 		margin-top: 72px;
 		.slick-prev,
 		.slick-next {
-			bottom: 94px;
+			bottom: 72px;
 			left: auto;
 			right: 15%;
 		}
@@ -228,11 +228,12 @@
 	}
 	&__btn {
 		position: absolute;
-		bottom: 0;
+		bottom: -12px;
 	}
 }
 
 .schedule {
+	overflow-x: hidden;
 	padding-bottom: 70px;
 	position: relative;
 	background: url(../images/bg-schedule.png) no-repeat center bottom/contain;
@@ -350,7 +351,7 @@
 	&__car {
 		position: absolute;
 		bottom: 40px;
-		left: -20%;
+		left: -30%;
 	}
 }
 
@@ -1937,12 +1938,198 @@
 	}
 
 	.car {
-		display: none;
+		padding: 120px 0 20px;
+		&__slider {
+			margin-top: 56px;
+			.slick-prev,
+			.slick-next {
+				width: 56px;
+				height: 56px;
+				bottom: 95px;
+				right: 50%;
+				background-size: 20px !important;
+			}
+			.slick-prev {
+				@include transform(translateX(-10%));
+				background: $base-bg url(../images/icons/arrow-slider-prev-white.png) no-repeat center center;
+				&:hover,
+				&:focus,
+				&.slick-disabled {
+					background: #b5b5b5 url(../images/icons/arrow-prev.png) no-repeat center center;
+				}
+			}
+			.slick-next {
+				@include transform(translateX(100%));
+				background: $base-bg url(../images/icons/arrow-slider-next-white.png) no-repeat center center;
+				&:hover,
+				&:focus,
+				&.slick-disabled {
+					background: #b5b5b5 url(../images/icons/arrow-next.png) no-repeat center center;
+				}
+			}
+		}
+		&__item {
+			background-color: #232323;
+		}
+		&__info {
+			max-width: 350px;
+			margin: 0 auto;
+			padding: 27px 16px 170px;
+			h3 {
+				width: 120px;
+				font-size: 19px;
+				margin: 0 0 40px auto;
+			}
+			p {
+				text-align: center;
+				font-size: 14px;
+			}
+		}
+		&__gallery {
+			margin: 20px 0 30px;
+		}
+		&__gallery-link {
+			flex: auto;
+			width: 30%;
+			height: 120px;
+		}
+		&__list {
+			font-size: 14px;
+			> li {
+				width: 100%;
+				padding-right: 0;
+				margin-bottom: 16px;
+				&:first-of-type {
+					margin-bottom: 16px;
+				}
+				img {
+					width: 26px;
+					margin-right: 16px;
+				}
+			}
+		}
+		&__auto {
+			position: absolute;
+			top: 14px;
+			right: auto;
+			left: 50%;
+			@include transform(translateX(-80%));
+			width: 200px;
+		}
+		&__text-bottom {
+			margin: 0;
+			max-width: 100%;
+			text-align: left !important;
+		}
+		&__btn {
+			position: absolute;
+			bottom: 18px;
+			width: 320px;
+			left: 50%;
+			@include transform(translateX(-50%));
+		}
 	}
-	
+
 	.schedule {
-		
-		display: none;
+		padding-bottom: 0;
+		background: url(../images/bg-schedule-screen-mob.png) no-repeat center bottom / contain;
+		.title-section {
+			font-size: 80px;
+		}
+		&__box {
+			margin: 48px auto 20px;
+			max-width: 350px;
+		}
+		&__nav {
+			height: 40px;
+			> div,
+			span {
+				display: none;
+			}
+		}
+		&__table {
+			background-color: $base-bg;
+		}
+		&__table-header {
+			font-size: 12px;
+		}
+		&__table-col-2 {
+			display: none;
+		}
+		&__table-col-1 {
+			background-color: $base-bg;
+			font-size: 12px;
+			padding: 10px 0;
+			width: 14.2%;
+			flex: auto;
+			> img {
+				height: 20px;
+			}
+			> span {
+				display: block;
+				width: 29px;
+				overflow: hidden;
+				margin: 0 auto;
+			}
+			&:nth-of-type(2) {
+				border-left: none;
+			}
+		}
+		&__sing {
+			width: 72px;
+			margin: 0 30% 0 auto;
+			display: block;
+		}
+		&__info {
+			max-width: 350px;
+			margin: 70px auto 0;
+		}
+		&__subtitle {
+			font-size: 22px;
+		}
+		&__car {
+			width: 400px;
+			max-width: none;
+			bottom: 31%;
+		}
+	}
+
+	.tab-content__item {
+		.schedule__table-body {
+			.schedule__table-row {
+				display: none;
+			}
+		}
+		&:first-of-type {
+			.schedule__table-body {
+				.schedule__table-row {
+					display: none;
+					&:first-of-type {
+						display: flex;
+					}
+				}
+			}
+		}
+		&:nth-of-type(2) {
+			.schedule__table-body {
+				.schedule__table-row {
+					display: none;
+					&:nth-of-type(2) {
+						display: flex;
+					}
+				}
+			}
+		}
+		&:last-of-type {
+			.schedule__table-body {
+				.schedule__table-row {
+					display: none;
+					&:last-of-type {
+						display: flex;
+					}
+				}
+			}
+		}
 	}
 
 	.social-package {
@@ -2319,7 +2506,6 @@
 			width: 100%;
 			max-width: 350px;
 			@include radius(5px);
-			overflow: hidden;
 			margin-bottom: 18px;
 			> p {
 				padding: 30px;
@@ -2337,6 +2523,7 @@
 				}
 			}
 			.phone {
+				width: 100%;
 				font-size: 16px;
 			}
 		}
@@ -2403,6 +2590,13 @@
 		}
 	}
 
+	.car {
+		&__slider {
+			width: calc(100% + 30px);
+			margin-left: -15px;
+		}
+	}
+
 	.reviews {
 		&__slider {
 			max-width: 350px;
@@ -2447,6 +2641,9 @@
 		.arrow-down {
 			bottom: -12px;
 		}
+		&__bottom {
+			background-size: 134%;
+		}
 	}
 }
 
@@ -2459,6 +2656,20 @@
 }
 
 @media only screen and (max-width: 350px) {
+	.car {
+		&__btn {
+			width: 290px;
+		}
+	}
+	.schedule {
+		background-position: center bottom 90px;
+		&__car {
+			width: 360px;
+			bottom: 33%;
+			left: -28%;
+		}
+	}
+
 	.leave-question {
 		.form {
 			max-width: 250px;

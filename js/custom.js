@@ -1,3 +1,12 @@
+$(window).on("load", function() {
+	if (/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent)) {
+		$("body").addClass("ios");
+	} else {
+		$("body").addClass("web");
+	}
+	$("body").removeClass("loaded");
+});
+
 $(document).ready(function() {
 	$(".open-phone-list").click(function() {
 		$(this).toggleClass("open");
@@ -44,10 +53,6 @@ $(document).ready(function() {
 			1000
 		);
 	});
-
-	// if ($("select").length === 1) {
-	// 	$("select").styler();
-	// }
 
 	// tabs
 	$(".tab-navigation").each(function() {
@@ -170,4 +175,47 @@ $(document).ready(function() {
 	});
 
 	$(".tel").mask("(999) 999-9999");
+
+	new WOW().init();
+
+	// animate car on scroll
+	const tween = new TimelineLite();
+
+	tween.add(
+		TweenLite.to("#carMoving", 1, {
+			x: "200%",
+			ease: Power1.easeInOut
+		})
+	);
+
+	const controller = new ScrollMagic.Controller();
+
+	const scene = new ScrollMagic.Scene({
+		triggerElement: ".schedule",
+		triggerHook: 0,
+		duration: 2600
+	})
+		.setTween(tween)
+		.addTo(controller);
 });
+
+if ($("*").is(".cookie")) {
+	$(document).ready(function() {
+		$(".cookie")
+			.fadeIn(400)
+			.addClass("show");
+		$("body").addClass("overflow-hidden");
+		// close cookie
+		$(".cookie__close, .cookie__content").click(function(e) {
+			e.preventDefault();
+			$(".cookie")
+				.fadeOut(400)
+				.removeClass("show");
+			$("body").removeClass("overflow-hidden");
+		});
+
+		$(".cookie__body").click(function(e) {
+			e.stopPropagation();
+		});
+	});
+}

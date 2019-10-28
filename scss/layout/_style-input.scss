@@ -134,6 +134,9 @@
 			color: $text-color-white;
 			a {
 				text-decoration: underline;
+				&:hover {
+					font-weight: 600;
+				}
 			}
 		}
 		&_dark {
@@ -160,17 +163,38 @@
 	background-color: $base-bg !important;
 	border: none;
 	padding: 0 24px;
+	&.error {
+		border: 1px solid #ff0000;
+	}
 	&::placeholder {
 		color: $color-placeholder;
 		font-size: 16.5px;
 	}
+	&:hover {
+		&::placeholder {
+			color: $text-color;
+		}
+	}
+	&:focus {
+		&::placeholder {
+			color: transparent;
+		}
+	}
 	&_user {
 		padding-left: 64px;
 		background: url(../images/icons/user.png) no-repeat center left 30px;
+		&:hover,
+		&:focus {
+			background-image: url(../images/icons/user-black.png);
+		}
 	}
 	&_email {
 		padding-left: 64px;
 		background: url(../images/icons/email.png) no-repeat center left 26px/20px;
+		&:hover,
+		&:focus {
+			background-color: url(../../images/icons/email.png);
+		}
 	}
 }
 

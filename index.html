@@ -5,22 +5,22 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="format-detection" content="telephone=no">
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, maximum-scale=1">
-	<title>Главная</title>
+	<title>Oazis-park</title>
 	<meta name='description' content="" />
 	<meta name="keywords" content="" />
-	<link rel="icon" type="image/x-icon" href="#" />
+	<link rel="icon" type="image/x-icon" href="images/favicon.jpg" />
 	<!-- fonts -->
 	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700&display=swap&subset=cyrillic"
 		rel="stylesheet">
 	<!-- libs -->
 	<link rel="stylesheet" href="css/components/bootstrap-grid.min.css" />
 	<link rel="stylesheet" href="css/components/lightbox.min.css">
-	<!-- <link rel="stylesheet" href="css/components/jquery.formstyler.css"> -->
+	<link rel="stylesheet" href="css/components/animate.css">
 
 	<link rel="stylesheet" type="text/css" href="css/style.css" />
 </head>
 
-<body>
+<body class="loaded">
 	<header class="header">
 		<div class="container">
 			<div class="row align-items-center justify-content-between">
@@ -92,22 +92,23 @@
 					<li class="menu__item"><a href="#teaching" class="scroll-section">Обучение</a></li>
 					<li class="menu__item"><a href="#team" class="scroll-section">Команда</a></li>
 					<li class="menu__item"><a href="#conditions" class="scroll-section">Условия</a></li>
-          <li class="menu__item"><a href="#contacts" class="scroll-section">Контакты</a></li>
-          <li>
-              <ul class="language header__language">
-                  <li>
-                    <a href="javascript:void(0)">Ua <img src="images/icons/arrow-down.svg" alt="down-arrow" /></a>
-                    <ul class="language__sub">
-                      <li>
-                        <a href="#">En</a>
-                      </li>
-                      <li>
-                        <a href="#">Ru</a>
-                      </li>
-                    </ul>
-                  </li>
-                </ul>
-          </li>
+					<li class="menu__item"><a href="#contacts" class="scroll-section">Контакты</a></li>
+					<li>
+						<ul class="language header__language">
+							<li>
+								<a href="javascript:void(0)">Ua <img src="images/icons/arrow-down.svg"
+										alt="down-arrow" /></a>
+								<ul class="language__sub">
+									<li>
+										<a href="#">En</a>
+									</li>
+									<li>
+										<a href="#">Ru</a>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</li>
 				</ul>
 			</nav>
 		</div>
@@ -314,7 +315,7 @@
 					<div class="form-services__footer">
 						<form action="" class="form form_row">
 							<div class="form__group">
-								<input type="text" class="style-input style-input_user" placeholder="Ваше имя">
+								<input type="text" class="style-input style-input_user error" placeholder="Ваше имя">
 							</div>
 							<div class="form__group form__group_phone d-flex">
 								<span><img src="images/flag.png" alt="flag">+38</span>
@@ -344,7 +345,7 @@
 				<div class="car__slider">
 					<div class="car__item">
 						<div class="row">
-							<div class="col-12 col-md-8">
+							<div class="col-12 col-md-8 order-1 order-md-1">
 								<div class="car__info">
 									<h3>Nissan Leaf 24 kW</h3>
 									<p><b>Запас хода на 1 зарядке:</b> 60-80 км.</p>
@@ -377,22 +378,24 @@
 											Полное техобслуживание происходит за наш счет
 										</li>
 									</ul>
+									<p class="car__text-bottom d-block d-md-none">Стоимость аренды с безлимитной
+										зарядкой от 650 грн. за 12 часов</p>
 								</div>
 							</div>
-							<div class="col-12 col-md-4">
+							<div class="col-12 col-md-4 order-0 order-md-1">
 								<div class="car__auto">
 									<img src="images/section-car/car-big.png" alt="car">
 								</div>
 							</div>
-							<div class="col-12 col-md-6">
-                  <p class="car__text-bottom">Стоимость аренды с безлимитной
-                      зарядкой от 650 грн. за 12 часов</p>
+							<div class="col-12 col-md-6 order-md-1 d-none d-md-block">
+								<p class="car__text-bottom">Стоимость аренды с безлимитной
+									зарядкой от 650 грн. за 12 часов</p>
 							</div>
 						</div>
 					</div>
 					<div class="car__item">
 						<div class="row">
-							<div class="col-12 col-md-8">
+							<div class="col-12 col-md-8 order-1 order-md-1">
 								<div class="car__info">
 									<h3>Nissan Leaf 24 kW</h3>
 									<p><b>Запас хода на 1 зарядке:</b> 60-80 км.</p>
@@ -425,16 +428,18 @@
 											Полное техобслуживание происходит за наш счет
 										</li>
 									</ul>
+									<p class="car__text-bottom d-block d-md-none">Стоимость аренды с безлимитной
+										зарядкой от 650 грн. за 12 часов</p>
 								</div>
 							</div>
-							<div class="col-12 col-md-4">
+							<div class="col-12 col-md-4 order-0 order-md-1">
 								<div class="car__auto">
 									<img src="images/section-car/car-big.png" alt="car">
 								</div>
 							</div>
-							<div class="col-12 col-md-6">
-									<p class="car__text-bottom">Стоимость аренды с безлимитной
-										зарядкой от 650 грн. за 12 часов</p>
+							<div class="col-12 col-md-6 order-md-1 d-none d-md-block">
+								<p class="car__text-bottom">Стоимость аренды с безлимитной
+									зарядкой от 650 грн. за 12 часов</p>
 							</div>
 						</div>
 					</div>
@@ -501,6 +506,7 @@
 								<div class="schedule__table-header">
 									<div class="schedule__table-row">
 										<div class="schedule__table-col-2">
+
 										</div>
 										<div class="schedule__table-col-1">
 											Пн.
@@ -532,31 +538,31 @@
 										</div>
 										<div class="schedule__table-col-1">
 											<img src="images/icons/sun.svg" alt="sun">
-											День
+											<span>День</span>
 										</div>
 										<div class="schedule__table-col-1">
 											<img src="images/icons/sun.svg" alt="sun">
-											День
+											<span>День</span>
 										</div>
 										<div class="schedule__table-col-1">
 											<img src="images/icons/bed.svg" alt="bed">
-											Выходной
+											<span>Выходной</span>
 										</div>
 										<div class="schedule__table-col-1">
 											<img src="images/icons/moon.svg" alt="moon">
-											Ночь
+											<span>Ночь</span>
 										</div>
 										<div class="schedule__table-col-1">
 											<img src="images/icons/sun.svg" alt="sun">
-											День
+											<span>День</span>
 										</div>
 										<div class="schedule__table-col-1">
 											<img src="images/icons/bed.svg" alt="bed">
-											Выходной
+											<span>Выходной</span>
 										</div>
 										<div class="schedule__table-col-1">
 											<img src="images/icons/sun.svg" alt="sun">
-											День
+											<span>День</span>
 										</div>
 									</div>
 									<div class="schedule__table-row">
@@ -565,31 +571,31 @@
 										</div>
 										<div class="schedule__table-col-1">
 											<img src="images/icons/sun.svg" alt="sun">
-											День
+											<span>День</span>
 										</div>
 										<div class="schedule__table-col-1">
 											<img src="images/icons/sun.svg" alt="sun">
-											День
+											<span>День</span>
 										</div>
 										<div class="schedule__table-col-1">
 											<img src="images/icons/moon.svg" alt="moon">
-											Ночь
+											<span>Ночь</span>
 										</div>
 										<div class="schedule__table-col-1">
 											<img src="images/icons/sun.svg" alt="sun">
-											День
+											<span>День</span>
 										</div>
 										<div class="schedule__table-col-1">
 											<img src="images/icons/sun.svg" alt="sun">
-											День
+											<span>День</span>
 										</div>
 										<div class="schedule__table-col-1">
 											<img src="images/icons/bed.svg" alt="bed">
-											Выходной
+											<span>Выходной</span>
 										</div>
 										<div class="schedule__table-col-1">
 											<img src="images/icons/moon.svg" alt="moon">
-											Ночь
+											<span>Ночь</span>
 										</div>
 									</div>
 									<div class="schedule__table-row">
@@ -598,31 +604,31 @@
 										</div>
 										<div class="schedule__table-col-1">
 											<img src="images/icons/bed.svg" alt="bed">
-											Выходной
+											<span>Выходной</span>
 										</div>
 										<div class="schedule__table-col-1">
 											<img src="images/icons/moon.svg" alt="moon">
-											Ночь
+											<span>Ночь</span>
 										</div>
 										<div class="schedule__table-col-1">
 											<img src="images/icons/bed.svg" alt="bed">
-											Выходной
+											<span>Выходной</span>
 										</div>
 										<div class="schedule__table-col-1">
 											<img src="images/icons/bed.svg" alt="bed">
-											Выходной
+											<span>Выходной</span>
 										</div>
 										<div class="schedule__table-col-1">
 											<img src="images/icons/moon.svg" alt="moon">
-											Ночь
+											<span>Ночь</span>
 										</div>
 										<div class="schedule__table-col-1">
 											<img src="images/icons/moon.svg" alt="moon">
-											Ночь
+											<span>Ночь</span>
 										</div>
 										<div class="schedule__table-col-1">
 											<img src="images/icons/sun.svg" alt="sun">
-											День
+											<span>День</span>
 										</div>
 									</div>
 								</div>
@@ -633,7 +639,6 @@
 								<div class="schedule__table-header">
 									<div class="schedule__table-row">
 										<div class="schedule__table-col-2">
-
 										</div>
 										<div class="schedule__table-col-1">
 											Пн.
@@ -665,31 +670,31 @@
 										</div>
 										<div class="schedule__table-col-1">
 											<img src="images/icons/sun.svg" alt="sun">
-											День
+											<span>День</span>
 										</div>
 										<div class="schedule__table-col-1">
 											<img src="images/icons/sun.svg" alt="sun">
-											День
+											<span>День</span>
 										</div>
 										<div class="schedule__table-col-1">
 											<img src="images/icons/bed.svg" alt="bed">
-											Выходной
+											<span>Выходной</span>
 										</div>
 										<div class="schedule__table-col-1">
 											<img src="images/icons/moon.svg" alt="moon">
-											Ночь
+											<span>Ночь</span>
 										</div>
 										<div class="schedule__table-col-1">
 											<img src="images/icons/sun.svg" alt="sun">
-											День
+											<span>День</span>
 										</div>
 										<div class="schedule__table-col-1">
 											<img src="images/icons/bed.svg" alt="bed">
-											Выходной
+											<span>Выходной</span>
 										</div>
 										<div class="schedule__table-col-1">
 											<img src="images/icons/sun.svg" alt="sun">
-											День
+											<span>День</span>
 										</div>
 									</div>
 									<div class="schedule__table-row">
@@ -698,31 +703,31 @@
 										</div>
 										<div class="schedule__table-col-1">
 											<img src="images/icons/sun.svg" alt="sun">
-											День
+											<span>День</span>
 										</div>
 										<div class="schedule__table-col-1">
 											<img src="images/icons/sun.svg" alt="sun">
-											День
+											<span>День</span>
 										</div>
 										<div class="schedule__table-col-1">
 											<img src="images/icons/moon.svg" alt="moon">
-											Ночь
+											<span>Ночь</span>
 										</div>
 										<div class="schedule__table-col-1">
 											<img src="images/icons/sun.svg" alt="sun">
-											День
+											<span>День</span>
 										</div>
 										<div class="schedule__table-col-1">
 											<img src="images/icons/sun.svg" alt="sun">
-											День
+											<span>День</span>
 										</div>
 										<div class="schedule__table-col-1">
 											<img src="images/icons/bed.svg" alt="bed">
-											Выходной
+											<span>Выходной</span>
 										</div>
 										<div class="schedule__table-col-1">
 											<img src="images/icons/moon.svg" alt="moon">
-											Ночь
+											<span>Ночь</span>
 										</div>
 									</div>
 									<div class="schedule__table-row">
@@ -731,31 +736,31 @@
 										</div>
 										<div class="schedule__table-col-1">
 											<img src="images/icons/bed.svg" alt="bed">
-											Выходной
+											<span>Выходной</span>
 										</div>
 										<div class="schedule__table-col-1">
 											<img src="images/icons/moon.svg" alt="moon">
-											Ночь
+											<span>Ночь</span>
 										</div>
 										<div class="schedule__table-col-1">
 											<img src="images/icons/bed.svg" alt="bed">
-											Выходной
+											<span>Выходной</span>
 										</div>
 										<div class="schedule__table-col-1">
 											<img src="images/icons/bed.svg" alt="bed">
-											Выходной
+											<span>Выходной</span>
 										</div>
 										<div class="schedule__table-col-1">
 											<img src="images/icons/moon.svg" alt="moon">
-											Ночь
+											<span>Ночь</span>
 										</div>
 										<div class="schedule__table-col-1">
 											<img src="images/icons/moon.svg" alt="moon">
-											Ночь
+											<span>Ночь</span>
 										</div>
 										<div class="schedule__table-col-1">
 											<img src="images/icons/sun.svg" alt="sun">
-											День
+											<span>День</span>
 										</div>
 									</div>
 								</div>
@@ -766,7 +771,6 @@
 								<div class="schedule__table-header">
 									<div class="schedule__table-row">
 										<div class="schedule__table-col-2">
-
 										</div>
 										<div class="schedule__table-col-1">
 											Пн.
@@ -798,31 +802,31 @@
 										</div>
 										<div class="schedule__table-col-1">
 											<img src="images/icons/sun.svg" alt="sun">
-											День
+											<span>День</span>
 										</div>
 										<div class="schedule__table-col-1">
 											<img src="images/icons/sun.svg" alt="sun">
-											День
+											<span>День</span>
 										</div>
 										<div class="schedule__table-col-1">
 											<img src="images/icons/bed.svg" alt="bed">
-											Выходной
+											<span>Выходной</span>
 										</div>
 										<div class="schedule__table-col-1">
 											<img src="images/icons/moon.svg" alt="moon">
-											Ночь
+											<span>Ночь</span>
 										</div>
 										<div class="schedule__table-col-1">
 											<img src="images/icons/sun.svg" alt="sun">
-											День
+											<span>День</span>
 										</div>
 										<div class="schedule__table-col-1">
 											<img src="images/icons/bed.svg" alt="bed">
-											Выходной
+											<span>Выходной</span>
 										</div>
 										<div class="schedule__table-col-1">
 											<img src="images/icons/sun.svg" alt="sun">
-											День
+											<span>День</span>
 										</div>
 									</div>
 									<div class="schedule__table-row">
@@ -831,31 +835,31 @@
 										</div>
 										<div class="schedule__table-col-1">
 											<img src="images/icons/sun.svg" alt="sun">
-											День
+											<span>День</span>
 										</div>
 										<div class="schedule__table-col-1">
 											<img src="images/icons/sun.svg" alt="sun">
-											День
+											<span>День</span>
 										</div>
 										<div class="schedule__table-col-1">
 											<img src="images/icons/moon.svg" alt="moon">
-											Ночь
+											<span>Ночь</span>
 										</div>
 										<div class="schedule__table-col-1">
 											<img src="images/icons/sun.svg" alt="sun">
-											День
+											<span>День</span>
 										</div>
 										<div class="schedule__table-col-1">
 											<img src="images/icons/sun.svg" alt="sun">
-											День
+											<span>День</span>
 										</div>
 										<div class="schedule__table-col-1">
 											<img src="images/icons/bed.svg" alt="bed">
-											Выходной
+											<span>Выходной</span>
 										</div>
 										<div class="schedule__table-col-1">
 											<img src="images/icons/moon.svg" alt="moon">
-											Ночь
+											<span>Ночь</span>
 										</div>
 									</div>
 									<div class="schedule__table-row">
@@ -864,31 +868,31 @@
 										</div>
 										<div class="schedule__table-col-1">
 											<img src="images/icons/bed.svg" alt="bed">
-											Выходной
+											<span>Выходной</span>
 										</div>
 										<div class="schedule__table-col-1">
 											<img src="images/icons/moon.svg" alt="moon">
-											Ночь
+											<span>Ночь</span>
 										</div>
 										<div class="schedule__table-col-1">
 											<img src="images/icons/bed.svg" alt="bed">
-											Выходной
+											<span>Выходной</span>
 										</div>
 										<div class="schedule__table-col-1">
 											<img src="images/icons/bed.svg" alt="bed">
-											Выходной
+											<span>Выходной</span>
 										</div>
 										<div class="schedule__table-col-1">
 											<img src="images/icons/moon.svg" alt="moon">
-											Ночь
+											<span>Ночь</span>
 										</div>
 										<div class="schedule__table-col-1">
 											<img src="images/icons/moon.svg" alt="moon">
-											Ночь
+											<span>Ночь</span>
 										</div>
 										<div class="schedule__table-col-1">
 											<img src="images/icons/sun.svg" alt="sun">
-											День
+											<span>День</span>
 										</div>
 									</div>
 								</div>
@@ -898,7 +902,7 @@
 				</div>
 				<div class="row justify-content-end align-items-center">
 					<div class="col-12 col-md-3">
-						<img src="images/sing.png" alt="">
+						<img src="images/sing.png" alt="" class="schedule__sing">
 					</div>
 					<div class="col-12 col-md-6">
 						<div class="schedule__info">
@@ -921,7 +925,7 @@
 			<div class="container">
 				<h2 class="title-section">Соцпакет</h2>
 				<div class="row">
-					<div class="col-12 col-sm-6 col-md-4">
+					<div class="col-12 col-sm-6 col-md-4 wow fadeInUp" data-wow-delay="0.3s">
 						<div class="social-package__card" style="background-color: #9640d3;">
 							<div class="social-package__image">
 								<img src="images/image-1.png" alt="">
@@ -932,7 +936,7 @@
 							</span>
 						</div>
 					</div>
-					<div class="col-12 col-sm-6 col-md-4">
+					<div class="col-12 col-sm-6 col-md-4 wow fadeInUp" data-wow-delay="0.3s">
 						<div class="social-package__card" style="background-color: #3c46cf;">
 							<div class="social-package__image">
 								<img src="images/image-2.png" alt="">
@@ -943,7 +947,7 @@
 							</span>
 						</div>
 					</div>
-					<div class="col-12 col-sm-6 col-md-4">
+					<div class="col-12 col-sm-6 col-md-4 wow fadeInUp" data-wow-delay="0.3s">
 						<div class="social-package__card" style="background-color: #c63ccf;">
 							<div class="social-package__image">
 								<img src="images/image-3.png" alt="">
@@ -954,7 +958,7 @@
 							</span>
 						</div>
 					</div>
-					<div class="col-12 col-sm-6 col-md-4">
+					<div class="col-12 col-sm-6 col-md-4 wow fadeInUp" data-wow-delay="0.6s">
 						<div class="social-package__card" style="background-color: #3bce87;">
 							<div class="social-package__image">
 								<img src="images/image-4.png" alt="">
@@ -966,7 +970,7 @@
 							<span class="social-package__new">Нонсенс</span>
 						</div>
 					</div>
-					<div class="col-12 col-sm-6 col-md-4">
+					<div class="col-12 col-sm-6 col-md-4 wow fadeInUp" data-wow-delay="0.6s">
 						<div class="social-package__card" style="background-color: #3ba1cf;">
 							<div class="social-package__image social-package__image_car">
 								<img src="images/image-5.png" alt="">
@@ -977,7 +981,7 @@
 							</span>
 						</div>
 					</div>
-					<div class="col-12 col-sm-6 col-md-4">
+					<div class="col-12 col-sm-6 col-md-4 wow fadeInUp" data-wow-delay="0.6s">
 						<div class="social-package__card social-package__card_last ">
 							<div class="social-package__image">
 								<img src="images/image-6.png" alt="">
@@ -996,7 +1000,7 @@
 				<h2 class="title-section">Бонусы</h2>
 				<p class="text-section">Мы регулярно проводим розыгрыши ценных призов среди наших водителей с высоким
 					рейтингом!</p>
-				<div class="bonuses__box">
+				<div class="bonuses__box wow fadeInUp" data-wow-delay="0.2s">
 					<span class="bonuses__number">01</span>
 					<div class="bonuses__card bonuses__card_first">
 						<div class="bonuses__header">
@@ -1023,20 +1027,20 @@
 						</ul>
 					</div>
 				</div>
-				<div class="bonuses__box">
+				<div class="bonuses__box wow fadeInUp" data-wow-delay="0.4s">
 					<span class="bonuses__number">02</span>
 					<div class="bonuses__card bonuses__card_second">
 						<p>Также на постоянной основе действует бонус «приведи друга» и получи 5000 грн.</p>
 					</div>
 				</div>
-				<div class="bonuses__box">
+				<div class="bonuses__box wow fadeInUp" data-wow-delay="0.6s">
 					<span class="bonuses__number">03</span>
 					<div class="bonuses__card bonuses__card_third">
 						<p>Кроме этого вы <br /> дополнительно получите 2000 грн. за первый месяц работы, если выполните
 							25 смен</p>
 					</div>
 				</div>
-				<div class="bonuses__card bonuses__card_last">
+				<div class="bonuses__card bonuses__card_last wow fadeInUp" data-wow-delay="0.8s">
 					<div class="row justify-content-end">
 						<div class="col-12 col-md-5">
 							<h3>Все просто!</h3>
@@ -1703,6 +1707,49 @@
 		</div>
 	</div>
 
+	<div class="cookie">
+		<div class="cookie__content">
+
+        <div class="cookie__body">
+            <div class="cookie__header">
+              <button type="button" class="cookie__close">
+                <img src="images/icons/close.svg" alt="close">
+              </button>
+            </div>
+            <div class="cookie__text cookie__text_second d-flex justify-content-between align-items-center">
+              <h5>Политика конфиденциальности и политика куки</h5>
+              <p>Мы используем <a href="#">файлы cookie</a>, чтобы анализировать трафик подбирать для вас подходящий контент и рекламу, а также
+                дать вам... <a href="#">подробнее</a></p>
+              <button type="button" class="btn btn-green">Принять</button>
+            </div>
+          </div>
+
+			<div class="cookie__body">
+				<div class="cookie__header">
+					<button type="button" class="cookie__close">
+						<img src="images/icons/close.svg" alt="close">
+					</button>
+				</div>
+				<div class="cookie__text">
+					<h5>Политика конфиденциальности</h5>
+					<p>Администрация сайта new.malevichpro.com обязуется сохранять вашу конфиденциальность в Интернете.
+						Мы уделяем большое значение охране предоставленных вами данных. Наша политика конфиденциальности
+						основана на требованиях <a href="#">Общего регламента о защите персональных данных Европейского Союза
+						(GDPR).</a> Мы собираем персональные данные в целях: улучшения работы нашего сервиса, осуществления
+						контактов с посетителями данного сайта, обработки данных пользователей для сервиса
+						онлайн-торговли, предоставления информации, которую запрашивал пользователь , а так же для
+						указанных ниже действий.</p>
+					<p><b>Сбор и использование персональных данных</b></p>
+					<p>Мы собираем и используем ваши персональные данные только в случае вашего добровольного согласия.
+						При согласии с этим вы разрешаете нам собирать и использовать следующие данные: имя и фамилия,
+						электронная почта, номер телефона . Сбор и обработка ваших данных проводится соответствии с
+						законами, действующими на территории Европейского Союза и в Украина.</p>
+				</div>
+      </div>
+      
+		</div>
+	</div>
+
 	<footer class="footer">
 		<div class="container">
 			<div class="row align-items-center">
@@ -1726,34 +1773,29 @@
 		</div>
 	</footer>
 
+	<div class="load">
+		<div class="load__content">
+			<img src="images/loader-img.gif" alt="cars" />
+			<div class="load__info">
+				<div class="logo d-flex align-items-center">
+					<img src="images/logo-green.png" alt="logo">
+					<p>Oazis-park <small>Автопарк №1 в Украине</small></p>
+				</div>
+				<p>Oazis-Park - это автопарк, в котором вы найдете лучшие условия для работы в такси</p>
+			</div>
+		</div>
+	</div>
+
 	<script src="js/jquery.min.js"></script>
 	<script src="js/components/slick.js"></script>
-  <script src="js/components/lightbox.min.js"></script>
-  <script src="js/components/jquery.maskedinput.min.js"></script>
-	<!-- <script src="js/components/jquery.formstyler.min.js"></script> -->
+	<script src="js/components/wow.min.js"></script>
+	<script src="js/components/lightbox.min.js"></script>
+	<script src="js/components/jquery.maskedinput.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TimelineMax.min.js"></script>
 	<script src="//s3-us-west-2.amazonaws.com/s.cdpn.io/16327/MorphSVGPlugin.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/animation.gsap.min.js"></script>
-	<!-- <script>
-		let tl = new TimelineMax({ onUpdate: updatePercentage });
-		const controller = new ScrollMagic.Controller();
-		tl.to('#carMoving', 1, { x: '160%' })
-		const scene = new ScrollMagic.Scene({
-			triggerElement: ".schedule",
-			triggerHook: "onLeave",
-			duration: 1000
-		})
-			.setPin(".schedule")
-			.setTween(tl)
-			.addTo(controller);
-
-		function updatePercentage() {
-			tl.progress();
-			//   console.log(tl.progress());
-		}
-	</script> -->
 	<script src="js/custom.js"></script>
 </body>
 

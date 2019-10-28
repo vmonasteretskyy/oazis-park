@@ -50,7 +50,11 @@
 	height: 66px;
 	a {
 		&:hover {
-			color: $text-green;
+			font-weight: 700;
+		}
+		&.active {
+			color: #bebebe;
+			font-weight: 700;
 		}
 	}
 }

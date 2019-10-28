@@ -43,8 +43,10 @@ section {
 	color: $text-color-white;
 	font-size: $base-fs + 1px;
 	font-weight: 700;
+	@include transition(0.3s);
 	&:hover {
 		color: $text-color-white;
+		box-shadow: 0 16px 18px rgba($color: #000000, $alpha: 0.2);
 	}
 	&:focus {
 		box-shadow: none;
@@ -53,6 +55,10 @@ section {
 
 .btn-green {
 	background-color: $button-green;
+	&:focus,
+	&:active {
+		background-color: #139949;
+	}
 }
 
 .btn-black {
@@ -285,6 +291,43 @@ section {
 	}
 }
 
+.loaded {
+	overflow: hidden;
+	.load {
+		display: block;
+	}
+}
+
+.load {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #f3f3f3;
+	z-index: 1000;
+	display: none;
+	&__content {
+		height: 100%;
+		@extend %center-center;
+		> img {
+			width: 460px;
+		}
+	}
+	&__info {
+		max-width: 560px;
+		.logo {
+			margin-bottom: 80px;
+			p {
+				margin-left: 48px;
+			}
+		}
+		> p {
+			font-size: 42px;
+		}
+	}
+}
+
 @media screen and (max-width: 1199.8px) {
 	body {
 		font-size: 14px !important;
@@ -358,6 +401,29 @@ section {
 			font-size: 18px;
 		}
 	}
+
+	.load {
+		&__content {
+			flex-direction: column;
+			> img {
+				width: 370px;
+			}
+		}
+		&__info {
+			order: -1;
+			.logo {
+				width: 340px;
+				margin: 0 auto 54px;
+				font-size: 35px;
+				p {
+					margin-left: 30px;
+					> small {
+						font-size: 18px;
+					}
+				}
+			}
+		}
+	}
 }
 
 @media screen and (max-width: 991.8px) {
@@ -405,6 +471,55 @@ section {
 		&__you-call {
 			font-size: 14px;
 			margin-right: 24px;
+		}
+	}
+
+	// tabs style
+	.tabs-block {
+		@include radius(0);
+	}
+	.tab-navigation {
+		flex-wrap: wrap;
+		&__item {
+			background-color: #adb2b9;
+			color: $text-color-white;
+			font-weight: 700;
+			font-size: 16px;
+			width: 49.6%;
+			flex: none;
+			&.active {
+				order: 2;
+				width: 100%;
+				margin-top: 2px;
+			}
+		}
+	}
+
+	.load {
+		&__content {
+			> img {
+				width: 200px;
+			}
+		}
+		&__info {
+			width: 278px;
+			.logo {
+				width: 170px;
+				margin: 0 auto 20px;
+				font-size: 17px;
+				> img {
+					width: 36px;
+				}
+				p {
+					margin-left: 10px;
+					> small {
+						font-size: 9px;
+					}
+				}
+			}
+			> p {
+				font-size: 20px;
+			}
 		}
 	}
 }
