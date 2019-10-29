@@ -26,7 +26,7 @@
 			<div class="row align-items-center justify-content-between">
 				<div class="col-6 col-md-5">
 					<a href="#" class="logo d-flex align-items-center">
-						<span class="logo__img"><img src="images/logo.png" alt="logo"></span>
+						<span class="logo__img"><img src="images/logo.svg" alt="logo"></span>
 						<p>Oazis-park <small>Автопарк №1 в Украине</small></p>
 					</a>
 				</div>
@@ -82,7 +82,9 @@
 					<a href="#" class="phone__you-call open-pop-up" data-target="#callBack">Вам перезвонить?</a>
 				</div>
 			</div>
-			<nav class="d-none d-md-block">
+		</div>
+		<nav class="header__nav d-none d-md-block">
+			<div class="container">
 				<ul class="menu d-flex align-items-center justify-content-between">
 					<li class="menu__item"><a href="#formatWork" class="scroll-section">Форматы работы</a></li>
 					<li class="menu__item"><a href="#cars" class="scroll-section">Автомобили</a></li>
@@ -110,8 +112,8 @@
 						</ul>
 					</li>
 				</ul>
-			</nav>
-		</div>
+			</div>
+		</nav>
 	</header>
 
 	<main>
@@ -127,15 +129,15 @@
 					<div class="col-12 col-md-5 col-lg-5 offset-lg-1">
 						<div class="first-screen__box">
 							<p>Зарабатывайте от 20 000<br /> до 35 000 грн. в месяц.</p>
-							<a href="#conditions" class="scroll-section"><img src="images/icons/info-white.svg"
+							<a href="#firstScreenBottom" class="scroll-section"><img src="images/icons/info-white.svg"
 									alt="info">
 								Подробнее об условиях</a>
 						</div>
 					</div>
 				</div>
 			</div>
-			<div class="first-screen__bottom">
-				<div class="container">
+			<div id="firstScreenBottom" class="first-screen__bottom">
+				<div class="container scroll-to">
 					<div class="row justify-content-center">
 						<div class="col-12 col-md-8 col-lg-7 text-center">
 							<p>Вы уже работаете в такси или начинаете?</p>
@@ -152,8 +154,8 @@
 
 		<section id="formatWork" class="format-section">
 			<div class="container">
-				<h2 class="title-section">Формат</h2>
-				<div class="form-services">
+				<h2 class="title-section scroll-to">Формат</h2>
+				<form class="form-services">
 					<div class="form-services__body">
 						<ul class="form-services__col">
 							<li class="form-services__header">
@@ -252,8 +254,12 @@
 									<span class="radio-input-checkmark"></span>
 									Обяз. план
 									<span class="icon-info">
-										<img src="images/icons/info-gray.svg" alt="">
-									</span>
+                    <img src="images/icons/info-gray.svg" alt="">
+                    <div class="box-info">
+                      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum recusandae quis laborum qui facere enim soluta incidunt expedita magni veritatis
+                      </p>
+                    </div>
+                  </span>
 								</label>
 							</li>
 							<li>
@@ -313,7 +319,7 @@
 						</ul>
 					</div>
 					<div class="form-services__footer">
-						<form action="" class="form form_row">
+						<div class="form form_row">
 							<div class="form__group">
 								<input type="text" class="style-input style-input_user error" placeholder="Ваше имя">
 							</div>
@@ -322,24 +328,24 @@
 								<input type="text" class="style-input tel" placeholder="___ ___ ____">
 							</div>
 							<div class="form__group">
-								<input type="submit" class="btn btn-green" value="Рассчитать заработок">
+								<button type="submit" class="btn btn-green">Рассчитать заработок</button>
 								<div class="form__checkbox">
 									<label class="label-checkbox">
-										<input type="checkbox">
+										<input type="checkbox" checked>
 										<span class="checkmark"></span>
 									</label>
 									<p>Я ознакомлен и принимаю <a href="#">правила обработки персональных данных</a></p>
 								</div>
 							</div>
-						</form>
+						</div>
 					</div>
-				</div>
+				</form>
 			</div>
 		</section>
 
 		<section id="cars" class="car">
 			<div class="container">
-				<h2 class="title-section">Авто</h2>
+				<h2 class="title-section scroll-to">Авто</h2>
 				<p class="text-section">Все наши автомобили от 2013 года выпуска и новее, Забудьте о работе на
 					стареньких Lanos, Aveo и другие</p>
 				<div class="car__slider">
@@ -454,7 +460,7 @@
 
 		<section id="schedule" class="schedule">
 			<div class="container">
-				<h2 class="title-section">График</h2>
+				<h2 class="title-section scroll-to">График</h2>
 				<p class="text-section">У нас вы можете работать сами или с напарниками</p>
 				<div class="tabs-block schedule__box">
 					<ul class="tab-navigation">
@@ -506,7 +512,6 @@
 								<div class="schedule__table-header">
 									<div class="schedule__table-row">
 										<div class="schedule__table-col-2">
-
 										</div>
 										<div class="schedule__table-col-1">
 											Пн.
@@ -923,7 +928,7 @@
 
 		<section id="socialPackage" class="social-package">
 			<div class="container">
-				<h2 class="title-section">Соцпакет</h2>
+				<h2 class="title-section scroll-to">Соцпакет</h2>
 				<div class="row">
 					<div class="col-12 col-sm-6 col-md-4 wow fadeInUp" data-wow-delay="0.3s">
 						<div class="social-package__card" style="background-color: #9640d3;">
@@ -931,9 +936,17 @@
 								<img src="images/image-1.png" alt="">
 							</div>
 							<p>Оплата жилья иногородним</p>
-							<span class="social-package__icon-info">
+							<span class="social-package__icon-info open-info">
 								<img src="images/icons/info-white.svg" alt="">
 							</span>
+							<div class="social-package__info">
+								<button type="button" class="close-info" style="background-color: #9640d3;">
+									<img src="images/icons/close-white.svg" alt="close">
+								</button>
+								<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. A commodi earum
+									consequatur. Eaque, ut quisquam magni molestias pariatur consequatur commodi
+									perspiciatis quam!</p>
+							</div>
 						</div>
 					</div>
 					<div class="col-12 col-sm-6 col-md-4 wow fadeInUp" data-wow-delay="0.3s">
@@ -942,9 +955,17 @@
 								<img src="images/image-2.png" alt="">
 							</div>
 							<p>Бесплатный <br /> абонемент SportLife</p>
-							<span class="social-package__icon-info">
+							<span class="social-package__icon-info open-info">
 								<img src="images/icons/info-white.svg" alt="">
 							</span>
+							<div class="social-package__info">
+								<button type="button" class="close-info" style="background-color: #3c46cf;">
+									<img src="images/icons/close-white.svg" alt="close">
+								</button>
+								<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. A commodi earum
+									consequatur. Eaque, ut quisquam magni molestias pariatur consequatur commodi
+									perspiciatis quam!</p>
+							</div>
 						</div>
 					</div>
 					<div class="col-12 col-sm-6 col-md-4 wow fadeInUp" data-wow-delay="0.3s">
@@ -953,21 +974,37 @@
 								<img src="images/image-3.png" alt="">
 							</div>
 							<p>Медицинская <br />страховка</p>
-							<span class="social-package__icon-info">
+							<span class="social-package__icon-info open-info">
 								<img src="images/icons/info-white.svg" alt="">
 							</span>
+							<div class="social-package__info">
+								<button type="button" class="close-info" style="background-color: #c63ccf;">
+									<img src="images/icons/close-white.svg" alt="close">
+								</button>
+								<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. A commodi earum
+									consequatur. Eaque, ut quisquam magni molestias pariatur consequatur commodi
+									perspiciatis quam!</p>
+							</div>
 						</div>
 					</div>
 					<div class="col-12 col-sm-6 col-md-4 wow fadeInUp" data-wow-delay="0.6s">
 						<div class="social-package__card" style="background-color: #3bce87;">
+							<span class="social-package__new">Нонсенс</span>
 							<div class="social-package__image">
 								<img src="images/image-4.png" alt="">
 							</div>
 							<p>Оплачиваемый отпуск на двоих в Египет </p>
-							<span class="social-package__icon-info">
+							<span class="social-package__icon-info open-info">
 								<img src="images/icons/info-white.svg" alt="">
 							</span>
-							<span class="social-package__new">Нонсенс</span>
+							<div class="social-package__info">
+								<button type="button" class="close-info" style="background-color: #3bce87;">
+									<img src="images/icons/close-white.svg" alt="close">
+								</button>
+								<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. A commodi earum
+									consequatur. Eaque, ut quisquam magni molestias pariatur consequatur commodi
+									perspiciatis quam!</p>
+							</div>
 						</div>
 					</div>
 					<div class="col-12 col-sm-6 col-md-4 wow fadeInUp" data-wow-delay="0.6s">
@@ -976,9 +1013,17 @@
 								<img src="images/image-5.png" alt="">
 							</div>
 							<p>Даём возможность взять под выкуп новое авто прямо с салона</p>
-							<span class="social-package__icon-info">
+							<span class="social-package__icon-info open-info">
 								<img src="images/icons/info-white.svg" alt="">
 							</span>
+							<div class="social-package__info">
+								<button type="button" class="close-info" style="background-color: #3ba1cf;">
+									<img src="images/icons/close-white.svg" alt="close">
+								</button>
+								<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. A commodi earum
+									consequatur. Eaque, ut quisquam magni molestias pariatur consequatur commodi
+									perspiciatis quam!</p>
+							</div>
 						</div>
 					</div>
 					<div class="col-12 col-sm-6 col-md-4 wow fadeInUp" data-wow-delay="0.6s">
@@ -997,7 +1042,7 @@
 
 		<section id="bonuses" class="bonuses">
 			<div class="container">
-				<h2 class="title-section">Бонусы</h2>
+				<h2 class="title-section scroll-to">Бонусы</h2>
 				<p class="text-section">Мы регулярно проводим розыгрыши ценных призов среди наших водителей с высоким
 					рейтингом!</p>
 				<div class="bonuses__box wow fadeInUp" data-wow-delay="0.2s">
@@ -1053,10 +1098,10 @@
 									<input type="text" class="style-input tel" placeholder="___ ___ ____">
 								</div>
 								<div class="form__group">
-									<input type="submit" class="btn btn-green" value="Рассчитать заработок">
+									<button type="submit" class="btn btn-green">Рассчитать заработок</button>
 									<div class="form__checkbox form__checkbox_dark">
 										<label class="label-checkbox">
-											<input type="checkbox">
+											<input type="checkbox" checked>
 											<span class="checkmark"></span>
 										</label>
 										<p>Я ознакомлен и принимаю <a href="#">правила обработки персональных данных</a>
@@ -1072,7 +1117,7 @@
 
 		<section id="teaching" class="teaching">
 			<div class="container">
-				<h2 class="title-section">Обучение</h2>
+				<h2 class="title-section scroll-to">Обучение</h2>
 				<p class="text-section">Мы регулярно проводим бесплатные мастер-класы для водителей, чтобы помочь вам
 					зарабатывать больше</p>
 				<div class="teaching__box">
@@ -1116,10 +1161,10 @@
 								<input type="email" class="style-input style-input_email" placeholder="Ваш E-mail">
 							</div>
 							<div class="form__group">
-								<input type="submit" class="btn btn-green" value="Рассчитать заработок">
+								<button type="submit" class="btn btn-green">Рассчитать заработок</button>
 								<div class="form__checkbox form__checkbox_dark">
 									<label class="label-checkbox">
-										<input type="checkbox">
+										<input type="checkbox" checked>
 										<span class="checkmark"></span>
 									</label>
 									<p>Я ознакомлен и принимаю <a href="#">правила обработки персональных
@@ -1137,7 +1182,7 @@
 
 		<section id="team" class="team">
 			<div class="container">
-				<h2 class="title-section">Команда</h2>
+				<h2 class="title-section scroll-to">Команда</h2>
 				<div class="team__box">
 					<div class="team__img">
 						<img src="images/team/image-team-1.jpg" alt="">
@@ -1158,7 +1203,7 @@
 
 		<section id="conditions" class="conditions">
 			<div class="container">
-				<h2 class="title-section">Условия</h2>
+				<h2 class="title-section scroll-to">Условия</h2>
 				<div class="row">
 					<div class="col-12 col-md-6">
 						<div class="conditions__green">
@@ -1265,187 +1310,191 @@
 				<h2 class="title-section">Начнем?</h2>
 				<p class="text-section">Выберите подходящий для себя формат работы и узнайте, сколько вы сможете
 					зарабатывать?</p>
-				<div class="form-services">
-					<div class="form-services__body">
-						<ul class="form-services__col">
-							<li class="form-services__header">
-								<p>Выберите тип авто</p>
-							</li>
-							<li>
-								<label class="label-radio-input">
-									<input type="radio" name="car" value="1">
-									<span class="radio-input-checkmark"></span>
-									Электрокар
-								</label>
-							</li>
-							<li>
-								<label class="label-radio-input">
-									<input type="radio" name="car" value="1">
-									<span class="radio-input-checkmark"></span>
-									Авто на ДВС
-								</label>
-							</li>
-							<li>
-								<label class="label-radio-input">
-									<input type="radio" name="car" value="1">
-									<span class="radio-input-checkmark"></span>
-									Еще не решил
-								</label>
-							</li>
-							<li></li>
-						</ul>
-						<ul class="form-services__col">
-							<li class="form-services__header">
-								<p>Выберите условия</p>
-							</li>
-							<li>
-								<label class="label-radio-input">
-									<input type="radio" name="conditions" value="1">
-									<span class="radio-input-checkmark"></span>
-									Авто в аренду
-								</label>
-							</li>
-							<li>
-								<label class="label-radio-input">
-									<input type="radio" name="conditions" value="1">
-									<span class="radio-input-checkmark"></span>
-									Авто под выкуп
-								</label>
-							</li>
-							<li>
-								<label class="label-radio-input">
-									<input type="radio" name="conditions" value="1">
-									<span class="radio-input-checkmark"></span>
-									Еще не решил
-								</label>
-							</li>
-							<li></li>
-						</ul>
-						<ul class="form-services__col">
-							<li class="form-services__header">
-								<p>Выберите службу</p>
-							</li>
-							<li>
-								<label class="label-radio-input">
-									<input type="radio" name="service" value="1">
-									<span class="radio-input-checkmark"></span>
-									<span class="icon icon_uber"></span>
-								</label>
-							</li>
-							<li>
-								<label class="label-radio-input">
-									<input type="radio" name="service" value="1">
-									<span class="radio-input-checkmark"></span>
-									<span class="icon icon_uklon"></span>
-								</label>
-							</li>
-							<li>
-								<label class="label-radio-input">
-									<input type="radio" name="service" value="1">
-									<span class="radio-input-checkmark"></span>
-									<span class="icon icon_bolt"></span>
-								</label>
-							</li>
-							<li>
-								<label class="label-radio-input">
-									<input type="radio" name="service" value="1">
-									<span class="radio-input-checkmark"></span>
-									Другое
-								</label>
-							</li>
-						</ul>
-						<ul class="form-services__col">
-							<li class="form-services__header">
-								<p>Выберите зарплату</p>
-							</li>
-							<li>
-								<label class="label-radio-input">
-									<input type="radio" name="salary" value="1">
-									<span class="radio-input-checkmark"></span>
-									Обяз. план
-									<span class="icon-info">
-										<img src="images/icons/info-gray.svg" alt="">
-									</span>
-								</label>
-							</li>
-							<li>
-								<label class="label-radio-input">
-									<input type="radio" name="salary" value="1">
-									<span class="radio-input-checkmark"></span>
-									Ставка 25 000
-								</label>
-							</li>
-							<li>
-								<label class="label-radio-input">
-									<input type="radio" name="salary" value="1">
-									<span class="radio-input-checkmark"></span>
-									40% от кассы
-								</label>
-							</li>
-							<li>
-								<label class="label-radio-input">
-									<input type="radio" name="salary" value="1">
-									<span class="radio-input-checkmark"></span>
-									Еще не решил
-								</label>
-							</li>
-						</ul>
-						<ul class="form-services__col">
-							<li class="form-services__header">
-								<p>Выберите график</p>
-							</li>
-							<li>
-								<label class="label-radio-input">
-									<input type="radio" name="schedule" value="1">
-									<span class="radio-input-checkmark"></span>
-									Я сам на авто
-								</label>
-							</li>
-							<li>
-								<label class="label-radio-input">
-									<input type="radio" name="schedule" value="1">
-									<span class="radio-input-checkmark"></span>
-									Я + напарник
-								</label>
-							</li>
-							<li>
-								<label class="label-radio-input">
-									<input type="radio" name="schedule" value="1">
-									<span class="radio-input-checkmark"></span>
-									Я + 2 напарника
-								</label>
-							</li>
-							<li>
-								<label class="label-radio-input">
-									<input type="radio" name="schedule" value="1">
-									<span class="radio-input-checkmark"></span>
-									Еще не решил
-								</label>
-							</li>
-						</ul>
-					</div>
-					<div class="form-services__footer">
-						<form action="" class="form form_row">
-							<div class="form__group">
-								<input type="text" class="style-input style-input_user" placeholder="Ваше имя">
-							</div>
-							<div class="form__group form__group_phone d-flex">
-								<span><img src="images/flag.png" alt="flag">+38</span>
-								<input type="text" class="style-input tel" placeholder="___ ___ ____">
-							</div>
-							<div class="form__group">
-								<input type="submit" class="btn btn-green" value="Рассчитать заработок">
-								<div class="form__checkbox">
-									<label class="label-checkbox">
-										<input type="checkbox">
-										<span class="checkmark"></span>
-									</label>
-									<p>Я ознакомлен и принимаю <a href="#">правила обработки персональных данных</a></p>
-								</div>
-							</div>
-						</form>
-					</div>
-				</div>
+					<form class="form-services">
+            <div class="form-services__body">
+              <ul class="form-services__col">
+                <li class="form-services__header">
+                  <p>Выберите тип авто</p>
+                </li>
+                <li>
+                  <label class="label-radio-input">
+                    <input type="radio" name="car" value="1">
+                    <span class="radio-input-checkmark"></span>
+                    Электрокар
+                  </label>
+                </li>
+                <li>
+                  <label class="label-radio-input">
+                    <input type="radio" name="car" value="1">
+                    <span class="radio-input-checkmark"></span>
+                    Авто на ДВС
+                  </label>
+                </li>
+                <li>
+                  <label class="label-radio-input">
+                    <input type="radio" name="car" value="1">
+                    <span class="radio-input-checkmark"></span>
+                    Еще не решил
+                  </label>
+                </li>
+                <li></li>
+              </ul>
+              <ul class="form-services__col">
+                <li class="form-services__header">
+                  <p>Выберите условия</p>
+                </li>
+                <li>
+                  <label class="label-radio-input">
+                    <input type="radio" name="conditions" value="1">
+                    <span class="radio-input-checkmark"></span>
+                    Авто в аренду
+                  </label>
+                </li>
+                <li>
+                  <label class="label-radio-input">
+                    <input type="radio" name="conditions" value="1">
+                    <span class="radio-input-checkmark"></span>
+                    Авто под выкуп
+                  </label>
+                </li>
+                <li>
+                  <label class="label-radio-input">
+                    <input type="radio" name="conditions" value="1">
+                    <span class="radio-input-checkmark"></span>
+                    Еще не решил
+                  </label>
+                </li>
+                <li></li>
+              </ul>
+              <ul class="form-services__col">
+                <li class="form-services__header">
+                  <p>Выберите службу</p>
+                </li>
+                <li>
+                  <label class="label-radio-input">
+                    <input type="radio" name="service" value="1">
+                    <span class="radio-input-checkmark"></span>
+                    <span class="icon icon_uber"></span>
+                  </label>
+                </li>
+                <li>
+                  <label class="label-radio-input">
+                    <input type="radio" name="service" value="1">
+                    <span class="radio-input-checkmark"></span>
+                    <span class="icon icon_uklon"></span>
+                  </label>
+                </li>
+                <li>
+                  <label class="label-radio-input">
+                    <input type="radio" name="service" value="1">
+                    <span class="radio-input-checkmark"></span>
+                    <span class="icon icon_bolt"></span>
+                  </label>
+                </li>
+                <li>
+                  <label class="label-radio-input">
+                    <input type="radio" name="service" value="1">
+                    <span class="radio-input-checkmark"></span>
+                    Другое
+                  </label>
+                </li>
+              </ul>
+              <ul class="form-services__col">
+                <li class="form-services__header">
+                  <p>Выберите зарплату</p>
+                </li>
+                <li>
+                  <label class="label-radio-input">
+                    <input type="radio" name="salary" value="1">
+                    <span class="radio-input-checkmark"></span>
+                    Обяз. план
+                    <span class="icon-info">
+                      <img src="images/icons/info-gray.svg" alt="">
+                      <div class="box-info">
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum recusandae quis laborum qui facere enim soluta incidunt expedita magni veritatis
+                        </p>
+                      </div>
+                    </span>
+                  </label>
+                </li>
+                <li>
+                  <label class="label-radio-input">
+                    <input type="radio" name="salary" value="1">
+                    <span class="radio-input-checkmark"></span>
+                    Ставка 25 000
+                  </label>
+                </li>
+                <li>
+                  <label class="label-radio-input">
+                    <input type="radio" name="salary" value="1">
+                    <span class="radio-input-checkmark"></span>
+                    40% от кассы
+                  </label>
+                </li>
+                <li>
+                  <label class="label-radio-input">
+                    <input type="radio" name="salary" value="1">
+                    <span class="radio-input-checkmark"></span>
+                    Еще не решил
+                  </label>
+                </li>
+              </ul>
+              <ul class="form-services__col">
+                <li class="form-services__header">
+                  <p>Выберите график</p>
+                </li>
+                <li>
+                  <label class="label-radio-input">
+                    <input type="radio" name="schedule" value="1">
+                    <span class="radio-input-checkmark"></span>
+                    Я сам на авто
+                  </label>
+                </li>
+                <li>
+                  <label class="label-radio-input">
+                    <input type="radio" name="schedule" value="1">
+                    <span class="radio-input-checkmark"></span>
+                    Я + напарник
+                  </label>
+                </li>
+                <li>
+                  <label class="label-radio-input">
+                    <input type="radio" name="schedule" value="1">
+                    <span class="radio-input-checkmark"></span>
+                    Я + 2 напарника
+                  </label>
+                </li>
+                <li>
+                  <label class="label-radio-input">
+                    <input type="radio" name="schedule" value="1">
+                    <span class="radio-input-checkmark"></span>
+                    Еще не решил
+                  </label>
+                </li>
+              </ul>
+            </div>
+            <div class="form-services__footer">
+              <div class="form form_row">
+                <div class="form__group">
+                  <input type="text" class="style-input style-input_user error" placeholder="Ваше имя">
+                </div>
+                <div class="form__group form__group_phone d-flex">
+                  <span><img src="images/flag.png" alt="flag">+38</span>
+                  <input type="text" class="style-input tel" placeholder="___ ___ ____">
+                </div>
+                <div class="form__group">
+                  <button type="submit" class="btn btn-green">Рассчитать заработок</button>
+                  <div class="form__checkbox">
+                    <label class="label-checkbox">
+                      <input type="checkbox" checked>
+                      <span class="checkmark"></span>
+                    </label>
+                    <p>Я ознакомлен и принимаю <a href="#">правила обработки персональных данных</a></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
 			</div>
 		</section>
 
@@ -1510,7 +1559,7 @@
 		</section>
 
 		<section id="contacts" class="contacts">
-			<div class="container">
+			<div class="container scroll-to">
 				<div class="row">
 					<div class="col-12 col-md-7">
 						<div class="contacts__info">
@@ -1584,10 +1633,10 @@
 						<input type="text" class="style-input tel" placeholder="___ ___ ____">
 					</div>
 					<div class="form__group">
-						<input type="submit" class="btn btn-black" value="Рассчитать заработок">
+						<button type="submit" class="btn btn-black">Рассчитать заработок</button>
 						<div class="form__checkbox">
 							<label class="label-checkbox">
-								<input type="checkbox">
+								<input type="checkbox" checked>
 								<span class="checkmark"></span>
 							</label>
 							<p>Я ознакомлен и принимаю <a href="#">правила обработки персональных данных</a></p>
@@ -1618,10 +1667,10 @@
 							<input type="text" class="style-input tel" placeholder="___ ___ ____">
 						</div>
 						<div class="form__group">
-							<input type="submit" class="btn btn-black" value="Рассчитать заработок">
+							<button type="submit" class="btn btn-black">Рассчитать заработок</button>
 							<div class="form__checkbox form__checkbox_dark">
 								<label class="label-checkbox">
-									<input type="checkbox">
+									<input type="checkbox" checked>
 									<span class="checkmark"></span>
 								</label>
 								<p>Я ознакомлен и принимаю <a href="#">правила обработки персональных
@@ -1654,10 +1703,10 @@
 							<input type="text" class="style-input tel" placeholder="___ ___ ____">
 						</div>
 						<div class="form__group">
-							<input type="submit" class="btn btn-black" value="Рассчитать заработок">
+							<button type="submit" class="btn btn-black">Рассчитать заработок</button>
 							<div class="form__checkbox form__checkbox_dark">
 								<label class="label-checkbox">
-									<input type="checkbox">
+									<input type="checkbox" checked>
 									<span class="checkmark"></span>
 								</label>
 								<p>Я ознакомлен и принимаю <a href="#">правила обработки персональных
@@ -1690,10 +1739,10 @@
 							<input type="text" class="style-input tel" placeholder="___ ___ ____">
 						</div>
 						<div class="form__group">
-							<input type="submit" class="btn btn-black" value="Рассчитать заработок">
+							<button type="submit" class="btn btn-black">Рассчитать заработок</button>
 							<div class="form__checkbox form__checkbox_dark">
 								<label class="label-checkbox">
-									<input type="checkbox">
+									<input type="checkbox" checked>
 									<span class="checkmark"></span>
 								</label>
 								<p>Я ознакомлен и принимаю <a href="#">правила обработки персональных
@@ -1710,19 +1759,20 @@
 	<div class="cookie">
 		<div class="cookie__content">
 
-        <div class="cookie__body">
-            <div class="cookie__header">
-              <button type="button" class="cookie__close">
-                <img src="images/icons/close.svg" alt="close">
-              </button>
-            </div>
-            <div class="cookie__text cookie__text_second d-flex justify-content-between align-items-center">
-              <h5>Политика конфиденциальности и политика куки</h5>
-              <p>Мы используем <a href="#">файлы cookie</a>, чтобы анализировать трафик подбирать для вас подходящий контент и рекламу, а также
-                дать вам... <a href="#">подробнее</a></p>
-              <button type="button" class="btn btn-green">Принять</button>
-            </div>
-          </div>
+			<div class="cookie__body">
+				<div class="cookie__header">
+					<button type="button" class="cookie__close">
+						<img src="images/icons/close.svg" alt="close">
+					</button>
+				</div>
+				<div class="cookie__text cookie__text_second d-flex justify-content-between align-items-center">
+					<h5>Политика конфиденциальности и политика куки</h5>
+					<p>Мы используем <a href="#">файлы cookie</a>, чтобы анализировать трафик подбирать для вас
+						подходящий контент и рекламу, а также
+						дать вам... <a href="#">подробнее</a></p>
+					<button type="button" class="btn btn-green">Принять</button>
+				</div>
+			</div>
 
 			<div class="cookie__body">
 				<div class="cookie__header">
@@ -1734,8 +1784,10 @@
 					<h5>Политика конфиденциальности</h5>
 					<p>Администрация сайта new.malevichpro.com обязуется сохранять вашу конфиденциальность в Интернете.
 						Мы уделяем большое значение охране предоставленных вами данных. Наша политика конфиденциальности
-						основана на требованиях <a href="#">Общего регламента о защите персональных данных Европейского Союза
-						(GDPR).</a> Мы собираем персональные данные в целях: улучшения работы нашего сервиса, осуществления
+						основана на требованиях <a href="#">Общего регламента о защите персональных данных Европейского
+							Союза
+							(GDPR).</a> Мы собираем персональные данные в целях: улучшения работы нашего сервиса,
+						осуществления
 						контактов с посетителями данного сайта, обработки данных пользователей для сервиса
 						онлайн-торговли, предоставления информации, которую запрашивал пользователь , а так же для
 						указанных ниже действий.</p>
@@ -1745,8 +1797,8 @@
 						электронная почта, номер телефона . Сбор и обработка ваших данных проводится соответствии с
 						законами, действующими на территории Европейского Союза и в Украина.</p>
 				</div>
-      </div>
-      
+			</div>
+
 		</div>
 	</div>
 
@@ -1755,7 +1807,7 @@
 			<div class="row align-items-center">
 				<div class="col-12 col-md-4">
 					<a href="#" class="footer__logo d-flex align-items-center">
-						<img src="images/logo.png" alt="logo">
+						<img src="images/logo.svg" alt="logo">
 						<p>Oazis-park <small>Автопарк №1 в Украине</small></p>
 					</a>
 				</div>
@@ -1778,7 +1830,7 @@
 			<img src="images/loader-img.gif" alt="cars" />
 			<div class="load__info">
 				<div class="logo d-flex align-items-center">
-					<img src="images/logo-green.png" alt="logo">
+					<img src="images/logo-green.svg" alt="logo">
 					<p>Oazis-park <small>Автопарк №1 в Украине</small></p>
 				</div>
 				<p>Oazis-Park - это автопарк, в котором вы найдете лучшие условия для работы в такси</p>

@@ -3,6 +3,9 @@
 	display: flex;
 	align-items: center;
 	position: relative;
+	width: 100%;
+	height: 100%;
+	cursor: pointer;
 	input {
 		position: absolute;
 		opacity: 0;
@@ -66,6 +69,7 @@
 		background-color: $base-bg;
 		border: none;
 		@include radius(5px);
+		cursor: pointer;
 		&::after {
 			content: "";
 			position: absolute;
@@ -134,9 +138,6 @@
 			color: $text-color-white;
 			a {
 				text-decoration: underline;
-				&:hover {
-					font-weight: 600;
-				}
 			}
 		}
 		&_dark {
@@ -163,6 +164,7 @@
 	background-color: $base-bg !important;
 	border: none;
 	padding: 0 24px;
+	@include transition(0.2s);
 	&.error {
 		border: 1px solid #ff0000;
 	}
@@ -182,10 +184,11 @@
 	}
 	&_user {
 		padding-left: 64px;
-		background: url(../images/icons/user.png) no-repeat center left 30px;
+		background: url(../images/icons/user-light-gray.svg) no-repeat center left 30px;
+		background-size: 16px;
 		&:hover,
 		&:focus {
-			background-image: url(../images/icons/user-black.png);
+			background-image: url(../images/icons/user-black.svg);
 		}
 	}
 	&_email {
@@ -193,7 +196,7 @@
 		background: url(../images/icons/email.png) no-repeat center left 26px/20px;
 		&:hover,
 		&:focus {
-			background-color: url(../../images/icons/email.png);
+			background-color: url(../images/icons/email.png);
 		}
 	}
 }

@@ -132,7 +132,7 @@
 
 .car {
 	overflow: hidden;
-	padding: 254px 0 20px;
+	padding: 254px 0 50px;
 	.col-12 {
 		position: relative;
 	}
@@ -351,7 +351,7 @@
 	&__car {
 		position: absolute;
 		bottom: 40px;
-		left: -30%;
+		left: -56%;
 	}
 }
 
@@ -408,6 +408,7 @@
 		position: absolute;
 		top: 20px;
 		right: 20px;
+		cursor: pointer;
 	}
 	&__new {
 		position: absolute;
@@ -429,6 +430,38 @@
 		height: 90px;
 		@include radius(0);
 		font-size: 27px;
+	}
+	&__info {
+		position: absolute;
+		top: 20px;
+		left: 20px;
+		right: 20px;
+		bottom: 20px;
+		background-color: rgba($color: #fff, $alpha: 0.9);
+		color: $text-color;
+		font-size: 18px;
+		padding: 30px 20px;
+		text-align: left;
+		@include radius(15px);
+		display: none;
+		p {
+			height: 100%;
+			overflow: hidden;
+		}
+	}
+	.close-info {
+		position: absolute;
+		top: -3px;
+		right: -3px;
+		width: 32px;
+		height: 32px;
+		@extend %center-center;
+		@include radius(15px);
+		cursor: pointer;
+		z-index: 10;
+		> img {
+			width: 16px;
+		}
 	}
 }
 
@@ -1093,6 +1126,12 @@
 		}
 	}
 
+	.schedule {
+		&__car {
+			width: 65%;
+		}
+	}
+
 	.contacts {
 		&__address {
 			top: 50%;
@@ -1322,6 +1361,23 @@
 		&__btn {
 			height: 66px;
 			font-size: 20px;
+		}
+		&__info {
+			top: 14px;
+			left: 14px;
+			right: 14px;
+			bottom: 14px;
+			font-size: 15px;
+			padding: 26px 14px;
+		}
+		.close-info {
+			top: -2px;
+			right: -2px;
+			width: 28px;
+			height: 28px;
+			> img {
+				width: 12px;
+			}
 		}
 	}
 
@@ -2161,7 +2217,7 @@
 		}
 		&__icon-info {
 			width: 24px;
-			top: 20px;
+			top: 14px;
 			right: 14px;
 		}
 		&__new {

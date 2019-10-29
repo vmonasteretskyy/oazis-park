@@ -4,12 +4,8 @@
 ================================================================================
 */
 .header {
-	position: fixed;
-	top: 0;
-	left: 0;
-	right: 0;
+	position: relative;
 	background-color: $base-bg;
-	z-index: 100;
 	&::after {
 		content: "";
 		position: absolute;
@@ -17,6 +13,17 @@
 		left: 0;
 		right: 0;
 		border-top: 1px solid rgba($color: $black, $alpha: 0.09);
+	}
+	&__nav {
+		background-color: $base-bg;
+		z-index: 100;
+		&.fixed {
+			position: fixed;
+			top: 0;
+			left: 0;
+			right: 0;
+			box-shadow: 0 2px 5px rgba($color: $black, $alpha: 0.09);
+		}
 	}
 }
 
@@ -48,13 +55,16 @@
 
 .menu {
 	height: 66px;
+	&__item {
+		&.active {
+			a {
+				color: #bebebe;
+			}
+		}
+	}
 	a {
 		&:hover {
-			font-weight: 700;
-		}
-		&.active {
 			color: #bebebe;
-			font-weight: 700;
 		}
 	}
 }

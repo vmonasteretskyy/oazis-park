@@ -16,13 +16,12 @@ body {
 	background-color: $base-bg;
 	height: 100%;
 	font-family: $base-font-family;
-	font-size: $base-fs !important;
+	font-size: $base-fs;
 	line-height: normal;
 	font-weight: 400;
 	color: $text-color;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
-	padding-top: 182px;
 }
 
 section {
@@ -274,6 +273,7 @@ section {
 		width: 33%;
 		flex: auto;
 		@include transition(0.4s);
+		cursor: pointer;
 		&.active {
 			background-color: $bg-green;
 			color: $text-color-white;
@@ -328,10 +328,35 @@ section {
 	}
 }
 
+.icon-info {
+	&:hover {
+		.box-info {
+			opacity: 1;
+			z-index: 2;
+		}
+	}
+}
+.box-info {
+	position: absolute;
+	top: 32px;
+	right: 0;
+	opacity: 0;
+	z-index: -1;
+	width: 240px;
+	@include transition(opacity 0.4s);
+	padding-top: 10px;
+	cursor: default;
+	p {
+		background-color: #fff;
+		box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+		border-radius: 5px;
+		padding: 12px 14px;
+	}
+}
+
 @media screen and (max-width: 1199.8px) {
 	body {
-		font-size: 14px !important;
-		padding-top: 120px;
+		font-size: 14px;
 	}
 
 	section {
@@ -441,10 +466,6 @@ section {
 }
 
 @media screen and (max-width: 767.8px) {
-	body {
-		padding-top: 66px;
-	}
-
 	.btn {
 		max-width: 350px;
 		height: 60px;
