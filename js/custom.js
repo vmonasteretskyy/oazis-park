@@ -23,12 +23,12 @@ $(document).ready(function() {
 		}
 	});
 
-	$(".open-phone-list").click(function() {
-		$(this).toggleClass("open");
-		$(this)
-			.next()
-			.fadeToggle(400);
-	});
+	// $(".open-phone-list").click(function() {
+	// 	$(this).toggleClass("open");
+	// 	$(this)
+	// 		.next()
+	// 		.fadeToggle(400);
+	// });
 
 	// open language
 	$(".language>li>a").click(function() {
@@ -205,6 +205,22 @@ $(document).ready(function() {
 		e.stopPropagation();
 	});
 
+	// slider gallery team
+	$(function() {
+		$(".slider").slick({
+			infinite: true,
+			slidesToShow: 1,
+			slidesToScroll: 1,
+			adaptiveHeight: true
+		});
+
+		$(".open-pop-up").click(function() {
+			if ($("#galleryTeam").hasClass("show")) {
+				$(".slider").resize();
+			}
+		});
+	});
+
 	$(".tel").mask("(999) 999-9999");
 
 	new WOW().init();
@@ -212,19 +228,21 @@ $(document).ready(function() {
 	// animate car on scroll
 	const tween = new TimelineLite();
 
-	tween.add(
-		TweenLite.to("#carMoving", 1, {
-			x: "200%",
-			ease: Power1.easeInOut
-		})
-	);
+	tween
+		.add(
+			TweenLite.to("#carMoving", 1, {
+				x: "200%",
+				ease: Power1.easeInOut
+			})
+		)
+		.add(TweenLite.to(".wheel", 1, { rotation: "+=360" }), "-=1");
 
 	const controller = new ScrollMagic.Controller();
 
 	const scene = new ScrollMagic.Scene({
 		triggerElement: ".schedule",
 		triggerHook: 0,
-		duration: 2600
+		duration: 2400
 	})
 		.setTween(tween)
 		.addTo(controller);
@@ -240,25 +258,40 @@ $(document).ready(function() {
 			.parent()
 			.fadeOut();
 	});
+
+	// animation dots on map first screen
+	[1, 2, 3, 4, 5].forEach(i => {
+		const motionPath = MorphSVGPlugin.pathDataToBezier(`#path${i}`, { align: `#dots${i}` });
+		const tl = new TimelineMax({ repeat: -1 });
+		TweenLite.set(`#dots${i}`, { xPercent: -50, yPercent: -50 });
+		tl.to(`#dots${i}`, 160, { bezier: { values: motionPath, type: "cubic", ease: Linear.easeNone, repeatDelay: 0 } });
+	});
+
+	$(".car__gallery-link").click(function() {
+		$("body").addClass("overflow-hidden");
+	});
+	$(".lb-close, .lightboxOverlay").click(function() {
+		$("body").removeClass("overflow-hidden");
+	});
 });
 
-// if ($("*").is(".cookie")) {
-// 	$(document).ready(function() {
-// 		$(".cookie")
-// 			.fadeIn(400)
-// 			.addClass("show");
-// 		$("body").addClass("overflow-hidden");
-// 		// close cookie
-// 		$(".cookie__close, .cookie__content").click(function(e) {
-// 			e.preventDefault();
-// 			$(".cookie")
-// 				.fadeOut(400)
-// 				.removeClass("show");
-// 			$("body").removeClass("overflow-hidden");
-// 		});
+if ($("*").is(".cookie")) {
+	$(document).ready(function() {
+		$(".cookie")
+			.fadeIn(400)
+			.addClass("show");
+		$("body").addClass("overflow-hidden");
+		// close cookie
+		$(".cookie__close, .cookie__content").click(function(e) {
+			e.preventDefault();
+			$(".cookie")
+				.fadeOut(400)
+				.removeClass("show");
+			$("body").removeClass("overflow-hidden");
+		});
 
-// 		$(".cookie__body").click(function(e) {
-// 			e.stopPropagation();
-// 		});
-// 	});
-// }
+		$(".cookie__body").click(function(e) {
+			e.stopPropagation();
+		});
+	});
+}

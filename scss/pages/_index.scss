@@ -120,13 +120,14 @@
 		right: 0;
 		bottom: -20%;
 		top: 36%;
-		background: linear-gradient(
-			to top,
-			rgba($color: #f2f4f9, $alpha: 0.2),
-			#f2f4f9 56%,
-			rgba($color: #f2f4f9, $alpha: 0.2)
-		);
+		// background: linear-gradient(
+		// 	to top,
+		// 	rgba($color: #f2f4f9, $alpha: 0.2),
+		// 	#f2f4f9 56%,
+		// 	rgba($color: #f2f4f9, $alpha: 0.2)
+		// );
 		z-index: -1;
+		background: url(../images/bg-form-services.svg) no-repeat center center/cover;
 	}
 }
 
@@ -236,20 +237,23 @@
 	overflow-x: hidden;
 	padding-bottom: 70px;
 	position: relative;
-	background: url(../images/bg-schedule.png) no-repeat center bottom/contain;
+	background: url(../images/bg-schedule.png), url(../images/bg-schedule.svg);
+	background-position: center bottom, center top 44%;
+	background-size: contain, cover;
+	background-repeat: no-repeat;
 	&::after {
 		content: "";
 		position: absolute;
 		left: 0;
 		right: 0;
-		bottom: 10%;
-		top: 16%;
-		background: linear-gradient(
-			to top,
-			rgba($color: #f2f4f9, $alpha: 0.2),
-			#f2f4f9 56%,
-			rgba($color: #f2f4f9, $alpha: 0.2)
-		);
+		bottom: 30%;
+		top: 26%;
+		// background: linear-gradient(
+		// 	to top,
+		// 	rgba($color: #f2f4f9, $alpha: 0.2),
+		// 	#f2f4f9 56%,
+		// 	rgba($color: #f2f4f9, $alpha: 0.2)
+		// );
 		z-index: -1;
 	}
 	&__box {
@@ -352,6 +356,16 @@
 		position: absolute;
 		bottom: 40px;
 		left: -56%;
+		.wheel {
+			position: absolute;
+			bottom: 30px;
+			&_right {
+				right: 220px;
+			}
+			&_left {
+				left: 196px;
+			}
+		}
 	}
 }
 
@@ -473,14 +487,15 @@
 		left: 0;
 		right: 0;
 		bottom: -14%;
-		top: 10%;
-		background: linear-gradient(
-			to top,
-			rgba($color: #f2f4f9, $alpha: 0.2),
-			#f2f4f9 80%,
-			rgba($color: #f2f4f9, $alpha: 0.2)
-		);
+		top: 5%;
+		// background: linear-gradient(
+		// 	to top,
+		// 	rgba($color: #f2f4f9, $alpha: 0.2),
+		// 	#f2f4f9 80%,
+		// 	rgba($color: #f2f4f9, $alpha: 0.2)
+		// );
 		z-index: -1;
+		background: url(../images/bg-bonuses.svg) no-repeat center center/cover;
 	}
 	&__box {
 		position: relative;
@@ -522,7 +537,7 @@
 	}
 	&__number {
 		@include circle(92px, 92px);
-		background-color: #f6f6f6;
+		background-color: #f2f5fa;
 		position: absolute;
 		top: 0;
 		left: 50%;
@@ -904,15 +919,16 @@
 		position: absolute;
 		left: 0;
 		right: 0;
-		bottom: -20%;
-		top: 36%;
-		background: linear-gradient(
-			to top,
-			rgba($color: #f2f4f9, $alpha: 0.2),
-			#f2f4f9 56%,
-			rgba($color: #f2f4f9, $alpha: 0.2)
-		);
+		bottom: -22%;
+		top: 46%;
+		// background: linear-gradient(
+		// 	to top,
+		// 	rgba($color: #f2f4f9, $alpha: 0.2),
+		// 	#f2f4f9 56%,
+		// 	rgba($color: #f2f4f9, $alpha: 0.2)
+		// );
 		z-index: -1;
+		background: url(../images/bg-form-services.svg) no-repeat center center/cover;
 	}
 }
 
@@ -964,11 +980,21 @@
 		.phone {
 			color: $text-color-white;
 			font-size: 16px;
+			margin-left: 0;
+			width: auto;
+			a {
+				&:hover {
+					color: $text-color;
+				}
+			}
 			&__list {
 				background-color: $bg-green;
 				width: calc(100% + 40px);
 				margin-left: -20px;
-				padding: 10px 20px;
+				padding: 0 20px;
+			}
+			&__number {
+				padding: 6px 0;
 			}
 		}
 	}
@@ -1128,7 +1154,17 @@
 
 	.schedule {
 		&__car {
-			width: 65%;
+			width: 912px;
+			.wheel {
+				width: 108px;
+				bottom: 28px;
+				&_right {
+					right: 196px;
+				}
+				&_left {
+					left: 178px;
+				}
+			}
 		}
 	}
 
@@ -1313,8 +1349,19 @@
 		}
 
 		&__car {
+			left: -42%;
 			width: 720px;
 			bottom: 30px;
+			.wheel {
+				width: 86px;
+				bottom: 20px;
+				&_right {
+					right: 154px;
+				}
+				&_left {
+					left: 134px;
+				}
+			}
 		}
 	}
 
@@ -1736,6 +1783,9 @@
 
 		&__car {
 			width: 600px;
+			.wheel {
+				display: none;
+			}
 		}
 	}
 
@@ -2579,7 +2629,6 @@
 				}
 			}
 			.phone {
-				width: 100%;
 				font-size: 16px;
 			}
 		}
